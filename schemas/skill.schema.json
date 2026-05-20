@@ -1,0 +1,92 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Skill",
+  "description": "An atomic, reusable reasoning capability. Skills are the smallest composable units of strategic cognition — they are composed by frameworks (strategic lenses) and agents (workflow routers).",
+  "type": "object",
+  "required": ["id", "name", "type", "version", "status", "purpose", "inputs", "outputs", "triggers", "operational_logic", "failure_modes"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "snake_case unique identifier"
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "const": "skill"
+    },
+    "aliases": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Alternate IDs this skill has been known by"
+    },
+    "version": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "draft", "deprecated"]
+    },
+    "purpose": {
+      "type": "string",
+      "description": "One-sentence statement of what cognitive capability this primitive provides"
+    },
+    "origin": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Source ideas, research, or stories the primitive is derived from"
+    },
+    "inputs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Types of artifacts or signals this primitive operates on"
+    },
+    "outputs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "What the primitive produces when applied"
+    },
+    "triggers": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Observable signals that this primitive should be invoked"
+    },
+    "operational_logic": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Step-by-step procedure for applying the primitive"
+    },
+    "failure_modes": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Known ways this primitive misfires or is misapplied"
+    },
+    "confidence_model": {
+      "type": "object",
+      "properties": {
+        "low": { "type": "string" },
+        "medium": { "type": "string" },
+        "high": { "type": "string" }
+      },
+      "description": "How to calibrate output confidence based on signal strength"
+    },
+    "related_skills": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "related_primitives": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Deprecated alias for related_skills (kept for backward compatibility with v1.0 source material)"
+    },
+    "used_by_frameworks": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "used_by_agents": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

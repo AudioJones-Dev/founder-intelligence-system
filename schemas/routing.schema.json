@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Routing Decision",
+  "description": "A routing decision: given a set of detected signals, which frameworks (and which agents) should be invoked, in what order, and which are explicitly skipped.",
+  "type": "object",
+  "required": ["signals", "framework_routes"],
+  "properties": {
+    "signals": {
+      "type": "array",
+      "description": "Detected signals from source material",
+      "items": {
+        "type": "object",
+        "properties": {
+          "signal": { "type": "string" },
+          "evidence": { "type": "string" },
+          "confidence": {
+            "type": "string",
+            "enum": ["low", "medium", "high"]
+          }
+        }
+      }
+    },
+    "framework_routes": {
+      "type": "array",
+      "description": "Frameworks to apply, ordered by priority",
+      "items": {
+        "type": "object",
+        "properties": {
+          "framework_id": { "type": "string" },
+          "priority": { "type": "integer", "minimum": 1 },
+          "trigger_signals": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "rationale": { "type": "string" }
+        }
+      }
+    },
+    "skip": {
+      "type": "array",
+      "description": "Frameworks explicitly not applied and why",
+      "items": {
+        "type": "object",
+        "properties": {
+          "framework_id": { "type": "string" },
+          "reason": { "type": "string" }
+        }
+      }
+    }
+  }
+}

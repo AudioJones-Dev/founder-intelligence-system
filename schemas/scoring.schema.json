@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Opportunity Score",
+  "type": "object",
+  "required": ["score_type", "value", "rationale"],
+  "properties": {
+    "score_type": {
+      "type": "string",
+      "enum": ["golden_opportunity", "moat_strength", "timing_asymmetry", "framework_specific"]
+    },
+    "value": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 10
+    },
+    "rationale": {
+      "type": "string"
+    },
+    "dimensions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "value": { "type": "number", "minimum": 1, "maximum": 10 },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["low", "medium", "high"]
+    }
+  }
+}

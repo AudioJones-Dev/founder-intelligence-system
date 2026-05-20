@@ -1,0 +1,102 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Strategic Framework",
+  "description": "v1.2 — extends v1.1 with skills_used (canonical name, supersedes primitives_used) and related_doctrine.",
+  "type": "object",
+  "required": ["id", "name", "type", "version", "status", "use_when", "inputs_required", "outputs"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "snake_case unique identifier"
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable framework name"
+    },
+    "type": {
+      "type": "string",
+      "const": "strategic_framework"
+    },
+    "version": {
+      "type": "string",
+      "description": "Semantic version, e.g. 1.0"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "draft", "deprecated"]
+    },
+    "use_when": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Conditions/signals that indicate this framework applies"
+    },
+    "avoid_when": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Conditions where this framework should NOT be applied"
+    },
+    "inputs_required": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "outputs": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "related_frameworks": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Other framework ids that combine well with this one"
+    },
+    "skills_used": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Skills this framework composes"
+    },
+    "primitives_used": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Deprecated alias for skills_used (kept for backward compatibility with v1.0/v1.1 source material)"
+    },
+    "related_doctrine": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Doctrine entries that frame the worldview behind this framework"
+    },
+    "diagnostic_questions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "triggers": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Observable signals in source material that indicate the framework should run"
+    },
+    "scoring_dimensions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "description", "scale"],
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "scale": { "type": "string", "description": "e.g. 1-10" }
+        }
+      }
+    },
+    "failure_modes": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Known ways this framework misfires or is misapplied"
+    },
+    "confidence_model": {
+      "type": "object",
+      "properties": {
+        "low": { "type": "string" },
+        "medium": { "type": "string" },
+        "high": { "type": "string" }
+      },
+      "description": "How to calibrate the framework's output confidence based on input signal strength"
+    }
+  }
+}
