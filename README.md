@@ -98,12 +98,15 @@ Each layer is independently useful and independently versioned. Each layer compo
 
 ## How AI Agents Should Use This Repo
 
-1. **Start with `meta/system-map.md`** — that file is the entry point for any agent that needs to orient.
+1. **Start with `meta/system-map.md`** — that file is the entry point for any agent that needs to orient. `meta/routing.md` is the canonical routing reference.
 2. **Read the relevant doctrine** before invoking any framework. The doctrine explains *why* the framework composes as it does.
 3. **For source material in:** invoke `agents/transcript-synthesis-agent.md`. It produces a signal extraction conforming to `schemas/routing.schema.json`.
-4. **For framework routing:** invoke `agents/golden-opportunity-strategist.md`. It selects frameworks based on detected signals.
-5. **For moat analysis:** invoke `agents/moat-detection-agent.md`. It composes `skills/moat-detection.md` against the six moat classes.
-6. **For output:** conform to the templates in `templates/` and the schemas in `schemas/`.
+4. **For founder-led-business diagnostics (Diagnose → Design → Deploy):** invoke `agents/ais-diagnostic-agent.md`. It composes Signal Audit, M.A.P. Attribution, Applied Intelligence Stack, and Founder Prediction Error Model.
+5. **For opportunity framing:** invoke `agents/golden-opportunity-strategist.md`. It selects frameworks based on detected signals.
+6. **For moat analysis:** invoke `agents/moat-detection-agent.md`. It composes `skills/moat-detection.md` against the six moat classes.
+7. **For output:** conform to the templates in `templates/` and the schemas in `schemas/`.
+
+Prompts in `prompts/` wrap specific agent modes (M.A.P. analysis, Signal Audit, Founder Prediction Error, N.I.C.H.E. opportunity analysis).
 
 Agents should treat YAML frontmatter as authoritative for routing. The markdown body is for human readers.
 

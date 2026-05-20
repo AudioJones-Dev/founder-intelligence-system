@@ -10,7 +10,7 @@ The Founder Intelligence System (FIS) is layered. This document is the entry poi
         │  signal · fis · complexity ·    │
         │  simplicity · org-memory        │
         └────────────┬────────────────────┘
-                     │ informs
+                     │ informs / operationalized by
         ┌────────────▼────────────────────┐
         │          FRAMEWORKS             │   composed strategic lenses
         │  complexity-compression-theory  │
@@ -22,6 +22,9 @@ The Founder Intelligence System (FIS) is layered. This document is the entry poi
         │  time-recovery-economics        │
         │  signal-audit-framework         │
         │  founder-prediction-error-model │
+        │  map-attribution-framework      │
+        │  applied-intelligence-stack     │
+        │  niche-framework (DRAFT)        │
         └────────────┬────────────────────┘
                      │ composes
         ┌────────────▼────────────────────┐
@@ -33,6 +36,10 @@ The Founder Intelligence System (FIS) is layered. This document is the entry poi
         │  time-horizon-arbitrage         │
         │  decision-compression           │
         │  moat-detection                 │
+        │  signal-hierarchy-analysis      │
+        │  attribution-analysis           │
+        │  causal-inference-analysis      │
+        │  founder-bottleneck-detection   │
         └────────────┬────────────────────┘
                      │ validated by
         ┌────────────▼────────────────────┐
@@ -47,6 +54,12 @@ The Founder Intelligence System (FIS) is layered. This document is the entry poi
         │  transcript-synthesis-agent     │
         │  golden-opportunity-strategist  │
         │  moat-detection-agent           │
+        │  ais-diagnostic-agent           │
+        │                                 │
+        │  prompts/map-attribution        │
+        │  prompts/signal-audit           │
+        │  prompts/founder-prediction-error│
+        │  prompts/niche-opportunity      │
         └────────────┬────────────────────┘
                      │ applied to
         ┌────────────▼────────────────────┐
@@ -145,21 +158,24 @@ The Founder Intelligence System (FIS) is layered. This document is the entry poi
 
 ## Agent Routing Logic
 
-The default router lives inside `agents/golden-opportunity-strategist.md`. Its routing table is reproduced here for reference:
+The canonical routing reference lives at `meta/routing.md` — it contains the full use-case-to-framework-to-agent table. A condensed view:
 
-| Detected signal pattern | Framework to invoke |
-|---|---|
-| Tool overload, fragmented workflows, AI adds output not clarity | `complexity_compression_theory` |
-| Founder is the bottleneck, sprawling offers | `curse_of_capability` |
-| Feature-heavy category, confused buyer language | `simplicity_arbitrage` |
-| Buyer/operator drowning in decisions | `decision_compression_systems` |
-| Stress-testing scalability | `success_simulation_mapping` |
-| Judgment lives only in people | `organizational_memory_infrastructure` |
-| Pricing outcome-based offers | `time_recovery_economics` |
-| Diligence: noticing layer suspect | `signal_audit_framework` |
-| Calibrating founder judgment | `founder_prediction_error_model` |
+| Detected signal pattern | Framework to invoke | Recommended agent |
+|---|---|---|
+| Tool overload, fragmented workflows, AI adds output not clarity | `complexity_compression_theory` | `ais_diagnostic_agent` |
+| Founder is the bottleneck, sprawling offers | `curse_of_capability` | `ais_diagnostic_agent` |
+| Feature-heavy category, confused buyer language | `simplicity_arbitrage` | `golden_opportunity_strategist` |
+| Buyer/operator drowning in decisions | `decision_compression_systems` | `ais_diagnostic_agent` |
+| Stress-testing scalability | `success_simulation_mapping` | `golden_opportunity_strategist` |
+| Judgment lives only in people | `organizational_memory_infrastructure` | `moat_detection_agent` |
+| Pricing outcome-based offers | `time_recovery_economics` | `golden_opportunity_strategist` |
+| Diligence: noticing layer suspect | `signal_audit_framework` | `ais_diagnostic_agent` |
+| Calibrating founder judgment | `founder_prediction_error_model` | `ais_diagnostic_agent` |
+| Attribution unclear / last-click being trusted | `map_attribution_framework` | `ais_diagnostic_agent` |
+| AI deployed on top of unclear signal | `applied_intelligence_stack` | `ais_diagnostic_agent` |
+| Choosing among candidate niches | `niche_framework` (draft) | `golden_opportunity_strategist` |
 
-When more than one framework's triggers fire, the router applies all and produces a stacked finding. Cross-framework combination rules are documented in `agents/golden-opportunity-strategist.md`.
+When more than one framework's triggers fire, the router applies all and produces a stacked finding. Cross-framework combination rules are documented in `meta/routing.md` and `agents/golden-opportunity-strategist.md`.
 
 ---
 

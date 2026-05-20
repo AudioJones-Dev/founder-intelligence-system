@@ -24,13 +24,27 @@ The allowed relation types (from `schemas/ontology.schema.json`):
 | `composed_by` | Target uses source as a component |
 | `informs` | Source's worldview underlies target |
 | `informed_by` | Target's worldview underlies source |
+| `derives_from` | Source's claim emerges from target's substrate |
+| `operationalizes` | Source turns target's abstraction into a runnable process |
+| `routes_to` | Source hands off to target in a workflow |
+| `depends_on` | Source cannot run cleanly without target |
+| `detects` | Source surfaces conditions named by target |
+| `attributes` | Source produces causal explanations consumed by target |
+| `predicts` | Source produces forward claims consumed by target |
+| `compresses` | Source reduces the surface area of target |
+| `amplifies` | Source increases the effect of target (good or bad) |
+| `evaluates_with` | Source uses target as its scoring or judgment instrument |
+| `produces` | Source's output conforms to or fills target |
+| `supports` | Source provides material that strengthens target |
 | `scores` | Source produces scoring of target |
 | `scored_by` | Target produces scoring of source |
 | `applies_to` | Source is run against target as input |
-| `related_to` | Generic semantic relation; weakest claim |
+| `related_to` | Generic semantic relation; weakest claim — use only when no typed relation fits |
 | `supersedes` | Source replaces target (target is deprecated) |
 | `superseded_by` | Target replaces source (source is deprecated) |
 | `alias_of` | Source is a renamed reference to target |
+
+**Authoring rule:** prefer the most specific typed relation. `related_to` is the relation of last resort; if a stronger relation fits, use it.
 
 ## Maturity States
 
