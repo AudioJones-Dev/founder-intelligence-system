@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Agent",
+  "description": "A workflow router that composes skills and frameworks to drive a multi-step analysis or production task. Agents do not contain reasoning capabilities of their own — they orchestrate skills and frameworks against source material to produce structured output.",
+  "type": "object",
+  "required": ["id", "name", "type", "version", "status", "role", "process"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "snake_case unique identifier"
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "const": "agent"
+    },
+    "version": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "draft", "deprecated"]
+    },
+    "role": {
+      "type": "string",
+      "description": "One-sentence statement of what this agent is for"
+    },
+    "process": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Ordered steps the agent performs"
+    },
+    "composes_skills": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "composes_frameworks": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "hands_off_to": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Other agents this one passes output to"
+    },
+    "conforms_to_schemas": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Schemas the agent's output must conform to"
+    },
+    "anti_patterns": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Doctrine",
+  "description": "A worldview, epistemological position, or strategic philosophy that informs the frameworks and skills below it. Doctrine is the why — the substrate of belief from which operational frameworks are derived.",
+  "type": "object",
+  "required": ["id", "name", "type", "version", "status", "core_thesis"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "snake_case unique identifier"
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "const": "doctrine"
+    },
+    "version": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "draft", "deprecated"]
+    },
+    "core_thesis": {
+      "type": "string",
+      "description": "One-sentence statement of the doctrine's central claim"
+    },
+    "foundational_assumptions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "informs_frameworks": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "informs_skills": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "related_doctrine": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "business_implications": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "ai_implications": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "failure_modes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "falsifiers": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "What would have to be observed for this doctrine to be wrong"
+    }
+  }
+}

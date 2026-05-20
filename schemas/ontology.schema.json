@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Ontology Concept",
+  "description": "A node in the Founder Intelligence System concept graph. Defines a concept, its type, its relationships to other concepts, and its provenance.",
+  "type": "object",
+  "required": ["id", "name", "type", "relationships"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "snake_case unique identifier"
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable concept name"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "skill",
+        "framework",
+        "doctrine",
+        "agent",
+        "scoring_rubric",
+        "output_template",
+        "concept"
+      ],
+      "description": "The layer this concept belongs to"
+    },
+    "maturity": {
+      "type": "string",
+      "enum": ["seed", "draft", "active", "stable", "deprecated"]
+    },
+    "source": {
+      "type": "string",
+      "description": "Where this concept originated — transcript reference, framework lineage, or external source"
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["relation", "target"],
+        "properties": {
+          "relation": {
+            "type": "string",
+            "enum": [
+              "composes",
+              "composed_by",
+              "informs",
+              "informed_by",
+              "scores",
+              "scored_by",
+              "applies_to",
+              "related_to",
+              "supersedes",
+              "superseded_by",
+              "alias_of"
+            ]
+          },
+          "target": {
+            "type": "string",
+            "description": "Target concept id"
+          },
+          "note": {
+            "type": "string",
+            "description": "Optional clarifying note about the relationship"
+          }
+        }
+      }
+    },
+    "version": {
+      "type": "string"
+    }
+  }
+}
