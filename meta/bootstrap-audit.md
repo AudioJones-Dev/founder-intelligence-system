@@ -83,7 +83,7 @@ All 27 source files were ingested and placed:
 - `doctrine/signal-doctrine.md`
 - `doctrine/founder-intelligence-system.md`
 - `doctrine/complexity-compression.md`
-- `doctrine/simplicity-arbitrage.md`
+- `doctrine/simplicity-arbitrage-doctrine.md`
 - `doctrine/organizational-memory.md`
 
 ### Skills (2 new)
