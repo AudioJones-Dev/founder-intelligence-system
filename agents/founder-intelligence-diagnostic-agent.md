@@ -5,6 +5,10 @@ type: agent
 version: 1.0
 status: active
 role: Run the three-stage Diagnose → Design → Deploy pipeline against a founder-led business to produce a layered intelligence-system diagnosis, a system blueprint, and an actionable deployment plan.
+process:
+  - Diagnose — run Signal Audit, M.A.P. Attribution, Founder Prediction Error, Applied Intelligence Stack health score, Founder Bottleneck Detection, and Ghost Note Detection to produce a diagnostic map
+  - Design — select the canonical frameworks the operating system will run on, model the six-layer data and decision flow, define the minimum viable signal set, and produce a decision-compression and founder-externalization plan
+  - Deploy — implement the chosen frameworks in the chosen surfaces, wire the prediction-to-outcome feedback loop, and validate against the original diagnosis (did the bottleneck move?)
 composes_skills:
   - signal_hierarchy_analysis
   - attribution_analysis
