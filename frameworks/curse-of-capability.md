@@ -17,6 +17,10 @@ related_frameworks:
   - complexity_compression_theory
   - decision_compression_systems
   - organizational_memory_infrastructure
+skills_used:
+  - founder_bottleneck_detection
+  - decision_compression
+  - ghost_note_detection
 inputs_required:
   - founder_role_breakdown
   - offer_portfolio

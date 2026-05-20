@@ -17,6 +17,10 @@ related_frameworks:
   - curse_of_capability
   - simplicity_arbitrage
   - decision_compression_systems
+skills_used:
+  - signal_hierarchy_analysis
+  - founder_bottleneck_detection
+  - decision_compression
 inputs_required:
   - business_model
   - customer_workflow

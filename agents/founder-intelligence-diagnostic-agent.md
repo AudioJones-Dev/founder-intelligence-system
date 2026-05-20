@@ -1,6 +1,6 @@
 ---
-id: ais_diagnostic_agent
-name: AIS Diagnostic Agent
+id: founder_intelligence_diagnostic_agent
+name: Founder Intelligence Diagnostic Agent
 type: agent
 version: 1.0
 status: active
@@ -34,7 +34,7 @@ anti_patterns:
   - Producing a Design or Deploy artifact without a completed Diagnose stage
 ---
 
-# AIS Diagnostic Agent
+# Founder Intelligence Diagnostic Agent
 
 ## Role
 Run the three-stage **Diagnose → Design → Deploy** pipeline against a founder-led business. The agent does not contain reasoning capability of its own — it orchestrates the skills, frameworks, and scoring rubrics in the canonical FIS substrate to produce a diagnosis, a blueprint, and a deployment plan.

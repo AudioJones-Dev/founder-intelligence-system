@@ -8,20 +8,20 @@ The schema this routes against: `schemas/routing.schema.json`.
 
 | Use case | Trigger condition | Primary framework | Supporting skills | Scoring rubric | Output template | Recommended agent |
 |---|---|---|---|---|---|---|
-| **Attribution analysis** | Operator cannot explain *why* an outcome occurred; last-click or last-touch attribution being trusted | `map_attribution_framework` | `attribution_analysis`, `causal_inference_analysis`, `signal_hierarchy_analysis` | (custom per engagement) | `opportunity-brief-template` | `ais_diagnostic_agent` |
-| **Founder overload / bottleneck** | Work pauses when founder is offline; decisions route back to founder; founder describes feeling "everywhere and nowhere" | `curse_of_capability` | `founder_bottleneck_detection`, `decision_compression`, `ghost_note_detection` | `moat_strength_score` (knowledge externalization class) | `opportunity-brief-template` | `ais_diagnostic_agent` |
-| **Signal audit / clarity diagnosis** | Dashboards exist without decisions attached; "more data" is being prescribed; team cannot list contrary signals | `signal_audit_framework` | `signal_hierarchy_analysis`, `ghost_note_detection`, `iterative_error_compression` | (custom: listening surface score) | `opportunity-brief-template` | `ais_diagnostic_agent` |
-| **Prediction mismatch / misattribution** | Same decisions go wrong repeatedly; founder reaching for tools/hires/content as fix; "I knew it" appears retroactively | `founder_prediction_error_model` | `iterative_error_compression`, `attribution_analysis`, `founder_bottleneck_detection`, `time_horizon_arbitrage` | (custom per engagement) | `opportunity-brief-template` | `ais_diagnostic_agent` |
-| **AI readiness diagnostic** | "We added AI but it didn't move the business"; AI being deployed on top of unclear signal | `applied_intelligence_stack` | `signal_hierarchy_analysis`, `attribution_analysis`, `founder_bottleneck_detection` | `golden_opportunity_score` (component: strategic fit) | `opportunity-brief-template` | `ais_diagnostic_agent` |
-| **Operational bottleneck / complexity drag** | Tool overload, fragmented workflows, AI adds output not clarity | `complexity_compression_theory` | `decision_compression`, `ghost_note_detection` | (custom per engagement) | `opportunity-brief-template` | `ais_diagnostic_agent` |
+| **Attribution analysis** | Operator cannot explain *why* an outcome occurred; last-click or last-touch attribution being trusted | `map_attribution_framework` | `attribution_analysis`, `causal_inference_analysis`, `signal_hierarchy_analysis` | (custom per engagement) | `opportunity-brief-template` | `founder_intelligence_diagnostic_agent` |
+| **Founder overload / bottleneck** | Work pauses when founder is offline; decisions route back to founder; founder describes feeling "everywhere and nowhere" | `curse_of_capability` | `founder_bottleneck_detection`, `decision_compression`, `ghost_note_detection` | `moat_strength_score` (knowledge externalization class) | `opportunity-brief-template` | `founder_intelligence_diagnostic_agent` |
+| **Signal audit / clarity diagnosis** | Dashboards exist without decisions attached; "more data" is being prescribed; team cannot list contrary signals | `signal_audit_framework` | `signal_hierarchy_analysis`, `ghost_note_detection`, `iterative_error_compression` | (custom: listening surface score) | `opportunity-brief-template` | `founder_intelligence_diagnostic_agent` |
+| **Prediction mismatch / misattribution** | Same decisions go wrong repeatedly; founder reaching for tools/hires/content as fix; "I knew it" appears retroactively | `founder_prediction_error_model` | `iterative_error_compression`, `attribution_analysis`, `founder_bottleneck_detection`, `time_horizon_arbitrage` | (custom per engagement) | `opportunity-brief-template` | `founder_intelligence_diagnostic_agent` |
+| **AI readiness diagnostic** | "We added AI but it didn't move the business"; AI being deployed on top of unclear signal | `applied_intelligence_stack` | `signal_hierarchy_analysis`, `attribution_analysis`, `founder_bottleneck_detection` | `golden_opportunity_score` (component: strategic fit) | `opportunity-brief-template` | `founder_intelligence_diagnostic_agent` |
+| **Operational bottleneck / complexity drag** | Tool overload, fragmented workflows, AI adds output not clarity | `complexity_compression_theory` | `decision_compression`, `ghost_note_detection` | (custom per engagement) | `opportunity-brief-template` | `founder_intelligence_diagnostic_agent` |
 | **Market opportunity evaluation** | Identifying defensible niches; positioning a productized offer; choosing among candidate markets | `niche_framework` (draft) | `ghost_note_detection`, `signal_hierarchy_analysis`, `attribution_analysis` | `golden_opportunity_score`, `timing_asymmetry_score` | `market-thesis-template`, `opportunity-brief-template` | `golden_opportunity_strategist` |
 | **Moat analysis** | Evaluating defensibility of a current advantage; diligence on whether a business has durable structure | `organizational_memory_infrastructure`, `simplicity_arbitrage` | `moat_detection`, `founder_bottleneck_detection`, `iterative_error_compression` | `moat_strength_score` | `opportunity-brief-template` | `moat_detection_agent` |
-| **Decision-load diagnosis** | Buyer or operator drowning in decisions; AI producing options not resolutions | `decision_compression_systems` | `decision_compression`, `adaptive_tension_tolerance` | (custom per engagement) | `opportunity-brief-template` | `ais_diagnostic_agent` |
+| **Decision-load diagnosis** | Buyer or operator drowning in decisions; AI producing options not resolutions | `decision_compression_systems` | `decision_compression`, `adaptive_tension_tolerance` | (custom per engagement) | `opportunity-brief-template` | `founder_intelligence_diagnostic_agent` |
 | **Pricing outcome-based offers** | Distinguishing time-saving from time-recovering; willingness-to-pay analysis | `time_recovery_economics` | `time_horizon_arbitrage`, `decision_compression` | (custom per engagement) | `market-thesis-template` | `golden_opportunity_strategist` |
 | **Stress-testing scalability** | "What breaks at 10x?"; pre-mortem on a strategy | `success_simulation_mapping` | `time_horizon_arbitrage`, `founder_bottleneck_detection` | (custom per engagement) | `opportunity-brief-template` | `golden_opportunity_strategist` |
 | **Transcript / content extraction** | Raw source material needs to become structured signals + candidate frameworks | (none; pre-routing) | `ghost_note_detection`, `signal_hierarchy_analysis` | n/a | `framework-extraction-template` | `transcript_synthesis_agent` |
 | **Opportunity diligence (full)** | End-to-end evaluation of a business opportunity from signals to recommendation | All canonical frameworks selected by signals | All canonical skills selected by frameworks | `golden_opportunity_score`, `moat_strength_score`, `timing_asymmetry_score` | `opportunity-brief-template` | `golden_opportunity_strategist` |
-| **Founder cognition calibration** | Founder wants explicit calibration of their judgment quality | `founder_prediction_error_model` | `iterative_error_compression`, `time_horizon_arbitrage`, `attribution_analysis` | (custom per engagement) | `opportunity-brief-template` | `ais_diagnostic_agent` |
+| **Founder cognition calibration** | Founder wants explicit calibration of their judgment quality | `founder_prediction_error_model` | `iterative_error_compression`, `time_horizon_arbitrage`, `attribution_analysis` | (custom per engagement) | `opportunity-brief-template` | `founder_intelligence_diagnostic_agent` |
 
 ## Signal → Framework Map (operational reference)
 
@@ -77,7 +77,7 @@ Outputs that depend on a draft framework must include a maturity disclaimer poin
 ```
 transcript-synthesis-agent
    ↓ produces extraction conforming to routing.schema.json
-ais-diagnostic-agent
+founder-intelligence-diagnostic-agent
    ↓ produces Diagnose → Design → Deploy brief
    ↓ may hand off to:
 golden-opportunity-strategist
@@ -90,4 +90,4 @@ moat-detection-agent
 
 ## Versioning
 
-This routing map is v1.1 (extended with M.A.P., Applied Intelligence Stack, N.I.C.H.E., AIS Diagnostic Agent, and the four new skills). New frameworks and agents must be added here when they are added to their layer folders. Removal requires a deprecation entry, not deletion.
+This routing map is v1.1 (extended with M.A.P., Applied Intelligence Stack, N.I.C.H.E., Founder Intelligence Diagnostic Agent, and the four new skills). New frameworks and agents must be added here when they are added to their layer folders. Removal requires a deprecation entry, not deletion.

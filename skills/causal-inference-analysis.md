@@ -52,7 +52,7 @@ used_by_frameworks:
   - founder_prediction_error_model
   - success_simulation_mapping
 used_by_agents:
-  - ais_diagnostic_agent
+  - founder_intelligence_diagnostic_agent
   - golden_opportunity_strategist
 ---
 

@@ -4,7 +4,7 @@ name: M.A.P. Attribution Analysis Prompt
 type: prompt
 version: 1.0
 status: active
-wraps_agent: ais_diagnostic_agent
+wraps_agent: founder_intelligence_diagnostic_agent
 loads:
   doctrine:
     - signal_doctrine

@@ -16,6 +16,10 @@ avoid_when:
 related_frameworks:
   - complexity_compression_theory
   - decision_compression_systems
+skills_used:
+  - signal_hierarchy_analysis
+  - decision_compression
+  - attribution_analysis
 inputs_required:
   - competitor_positioning
   - buyer_language

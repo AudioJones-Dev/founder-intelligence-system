@@ -54,7 +54,7 @@ used_by_frameworks:
   - niche_framework
 used_by_agents:
   - golden_opportunity_strategist
-  - ais_diagnostic_agent
+  - founder_intelligence_diagnostic_agent
 ---
 
 # Signal Hierarchy Analysis

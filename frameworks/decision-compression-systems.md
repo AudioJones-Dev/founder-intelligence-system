@@ -17,6 +17,10 @@ related_frameworks:
   - complexity_compression_theory
   - simplicity_arbitrage
   - organizational_memory_infrastructure
+skills_used:
+  - decision_compression
+  - signal_hierarchy_analysis
+  - iterative_error_compression
 inputs_required:
   - decision_inventory
   - decision_frequency
