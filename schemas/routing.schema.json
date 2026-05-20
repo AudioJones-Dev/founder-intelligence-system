@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://founder-intelligence.system/schemas/routing.schema.json",
+  "title": "Routing Logic",
+  "description": "Routes tasks to doctrine, frameworks, skills, and prompts for agent execution.",
+  "type": "object",
+  "required": ["route_id", "intent", "priority", "targets"],
+  "properties": {
+    "route_id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "intent": { "type": "string", "minLength": 3 },
+    "priority": { "type": "integer", "minimum": 1, "maximum": 5 },
+    "conditions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "targets": {
+      "type": "object",
+      "required": ["doctrine", "frameworks", "skills", "prompts"],
+      "properties": {
+        "doctrine": { "type": "array", "items": { "type": "string" } },
+        "frameworks": { "type": "array", "items": { "type": "string" } },
+        "skills": { "type": "array", "items": { "type": "string" } },
+        "prompts": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
+    "output_contract": { "type": "string" },
+    "fallback_route": { "type": "string", "pattern": "^[a-z0-9-]+$" }
+  },
+  "additionalProperties": false
+}

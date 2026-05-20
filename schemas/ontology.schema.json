@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://founder-intelligence.system/schemas/ontology.schema.json",
+  "title": "Ontology Node",
+  "description": "Semantic node used for consistent term and relationship mapping.",
+  "type": "object",
+  "required": ["id", "label", "type", "definition"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "label": { "type": "string", "minLength": 2 },
+    "type": {
+      "type": "string",
+      "enum": ["concept", "signal", "actor", "artifact", "state", "event", "metric"]
+    },
+    "definition": { "type": "string", "minLength": 10 },
+    "aliases": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "target"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["depends_on", "influences", "contradicts", "supports", "part_of", "maps_to"]
+          },
+          "target": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "note": { "type": "string" }
+        },
+        "additionalProperties": false
+      },
+      "default": []
+    },
+    "source": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "active", "deprecated"],
+      "default": "active"
+    }
+  },
+  "additionalProperties": false
+}

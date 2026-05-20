@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://founder-intelligence.system/schemas/skill.schema.json",
+  "title": "Skill",
+  "description": "Atomic cognitive operation used by founder intelligence agents and frameworks.",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "purpose",
+    "core_principle",
+    "inputs",
+    "outputs",
+    "detection_logic",
+    "failure_modes",
+    "related_skills"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "name": { "type": "string", "minLength": 3 },
+    "purpose": { "type": "string", "minLength": 10 },
+    "core_principle": { "type": "string", "minLength": 10 },
+    "inputs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "outputs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "detection_logic": { "type": "string", "minLength": 10 },
+    "operational_questions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "agent_usage": { "type": "string" },
+    "failure_modes": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "related_skills": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+      "default": []
+    },
+    "ontology_refs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "version": { "type": "string", "default": "1.0.0" }
+  },
+  "additionalProperties": false
+}
