@@ -56,7 +56,7 @@ used_by_frameworks:
   - applied_intelligence_stack
   - signal_audit_framework
 used_by_agents:
-  - ais_diagnostic_agent
+  - founder_intelligence_diagnostic_agent
   - moat_detection_agent
 ---
 

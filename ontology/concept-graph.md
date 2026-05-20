@@ -149,19 +149,22 @@ Format: each row is a `(source) --[relation]--> (target)` edge. Relations follow
 | `moat_detection_agent` | `composes` | `organizational_memory_infrastructure` |
 | `moat_detection_agent` | `composes` | `decision_compression_systems` |
 | `moat_detection_agent` | `composes` | `simplicity_arbitrage` |
-| `ais_diagnostic_agent` | `composes` | `signal_hierarchy_analysis` |
-| `ais_diagnostic_agent` | `composes` | `attribution_analysis` |
-| `ais_diagnostic_agent` | `composes` | `causal_inference_analysis` |
-| `ais_diagnostic_agent` | `composes` | `founder_bottleneck_detection` |
-| `ais_diagnostic_agent` | `composes` | `decision_compression` |
-| `ais_diagnostic_agent` | `composes` | `ghost_note_detection` |
-| `ais_diagnostic_agent` | `composes` | `iterative_error_compression` |
-| `ais_diagnostic_agent` | `composes` | `signal_audit_framework` |
-| `ais_diagnostic_agent` | `composes` | `map_attribution_framework` |
-| `ais_diagnostic_agent` | `composes` | `applied_intelligence_stack` |
-| `ais_diagnostic_agent` | `composes` | `founder_prediction_error_model` |
-| `ais_diagnostic_agent` | `routes_to` | `golden_opportunity_strategist` |
-| `ais_diagnostic_agent` | `routes_to` | `moat_detection_agent` |
+| `founder_intelligence_diagnostic_agent` | `composes` | `signal_hierarchy_analysis` |
+| `founder_intelligence_diagnostic_agent` | `composes` | `attribution_analysis` |
+| `founder_intelligence_diagnostic_agent` | `composes` | `causal_inference_analysis` |
+| `founder_intelligence_diagnostic_agent` | `composes` | `founder_bottleneck_detection` |
+| `founder_intelligence_diagnostic_agent` | `composes` | `decision_compression` |
+| `founder_intelligence_diagnostic_agent` | `composes` | `ghost_note_detection` |
+| `founder_intelligence_diagnostic_agent` | `composes` | `iterative_error_compression` |
+| `founder_intelligence_diagnostic_agent` | `composes` | `signal_audit_framework` |
+| `founder_intelligence_diagnostic_agent` | `composes` | `map_attribution_framework` |
+| `founder_intelligence_diagnostic_agent` | `composes` | `applied_intelligence_stack` |
+| `founder_intelligence_diagnostic_agent` | `composes` | `founder_prediction_error_model` |
+| `founder_intelligence_diagnostic_agent` | `composes` | `curse_of_capability` |
+| `founder_intelligence_diagnostic_agent` | `composes` | `organizational_memory_infrastructure` |
+| `founder_intelligence_diagnostic_agent` | `composes` | `decision_compression_systems` |
+| `founder_intelligence_diagnostic_agent` | `routes_to` | `golden_opportunity_strategist` |
+| `founder_intelligence_diagnostic_agent` | `routes_to` | `moat_detection_agent` |
 
 ## Scoring
 
@@ -179,7 +182,7 @@ Format: each row is a `(source) --[relation]--> (target)` edge. Relations follow
 | `framework_extraction_template` | `produces` | `transcript_synthesis_agent` |
 | `market_thesis_template` | `produces` | `golden_opportunity_strategist` |
 | `opportunity_brief_template` | `produces` | `golden_opportunity_strategist` |
-| `opportunity_brief_template` | `produces` | `ais_diagnostic_agent` |
+| `opportunity_brief_template` | `produces` | `founder_intelligence_diagnostic_agent` |
 
 ## Aliases
 

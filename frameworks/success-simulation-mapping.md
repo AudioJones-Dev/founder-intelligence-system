@@ -16,6 +16,10 @@ related_frameworks:
   - curse_of_capability
   - complexity_compression_theory
   - organizational_memory_infrastructure
+skills_used:
+  - founder_bottleneck_detection
+  - causal_inference_analysis
+  - iterative_error_compression
 inputs_required:
   - current_business_model
   - growth_target

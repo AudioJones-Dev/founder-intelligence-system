@@ -16,6 +16,10 @@ related_frameworks:
   - decision_compression_systems
   - simplicity_arbitrage
   - complexity_compression_theory
+skills_used:
+  - decision_compression
+  - founder_bottleneck_detection
+  - attribution_analysis
 inputs_required:
   - buyer_time_cost
   - hours_recovered

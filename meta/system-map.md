@@ -54,7 +54,7 @@ The Founder Intelligence System (FIS) is layered. This document is the entry poi
         │  transcript-synthesis-agent     │
         │  golden-opportunity-strategist  │
         │  moat-detection-agent           │
-        │  ais-diagnostic-agent           │
+        │  founder-intel-diagnostic-agent │
         │                                 │
         │  prompts/map-attribution        │
         │  prompts/signal-audit           │
@@ -162,17 +162,17 @@ The canonical routing reference lives at `meta/routing.md` — it contains the f
 
 | Detected signal pattern | Framework to invoke | Recommended agent |
 |---|---|---|
-| Tool overload, fragmented workflows, AI adds output not clarity | `complexity_compression_theory` | `ais_diagnostic_agent` |
-| Founder is the bottleneck, sprawling offers | `curse_of_capability` | `ais_diagnostic_agent` |
+| Tool overload, fragmented workflows, AI adds output not clarity | `complexity_compression_theory` | `founder_intelligence_diagnostic_agent` |
+| Founder is the bottleneck, sprawling offers | `curse_of_capability` | `founder_intelligence_diagnostic_agent` |
 | Feature-heavy category, confused buyer language | `simplicity_arbitrage` | `golden_opportunity_strategist` |
-| Buyer/operator drowning in decisions | `decision_compression_systems` | `ais_diagnostic_agent` |
+| Buyer/operator drowning in decisions | `decision_compression_systems` | `founder_intelligence_diagnostic_agent` |
 | Stress-testing scalability | `success_simulation_mapping` | `golden_opportunity_strategist` |
 | Judgment lives only in people | `organizational_memory_infrastructure` | `moat_detection_agent` |
 | Pricing outcome-based offers | `time_recovery_economics` | `golden_opportunity_strategist` |
-| Diligence: noticing layer suspect | `signal_audit_framework` | `ais_diagnostic_agent` |
-| Calibrating founder judgment | `founder_prediction_error_model` | `ais_diagnostic_agent` |
-| Attribution unclear / last-click being trusted | `map_attribution_framework` | `ais_diagnostic_agent` |
-| AI deployed on top of unclear signal | `applied_intelligence_stack` | `ais_diagnostic_agent` |
+| Diligence: noticing layer suspect | `signal_audit_framework` | `founder_intelligence_diagnostic_agent` |
+| Calibrating founder judgment | `founder_prediction_error_model` | `founder_intelligence_diagnostic_agent` |
+| Attribution unclear / last-click being trusted | `map_attribution_framework` | `founder_intelligence_diagnostic_agent` |
+| AI deployed on top of unclear signal | `applied_intelligence_stack` | `founder_intelligence_diagnostic_agent` |
 | Choosing among candidate niches | `niche_framework` (draft) | `golden_opportunity_strategist` |
 
 When more than one framework's triggers fire, the router applies all and produces a stacked finding. Cross-framework combination rules are documented in `meta/routing.md` and `agents/golden-opportunity-strategist.md`.

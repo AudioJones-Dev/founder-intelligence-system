@@ -16,6 +16,10 @@ related_frameworks:
   - curse_of_capability
   - decision_compression_systems
   - success_simulation_mapping
+skills_used:
+  - ghost_note_detection
+  - iterative_error_compression
+  - signal_hierarchy_analysis
 inputs_required:
   - knowledge_inventory
   - documentation_state

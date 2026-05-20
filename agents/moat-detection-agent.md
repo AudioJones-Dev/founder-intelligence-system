@@ -4,6 +4,13 @@ name: Moat Detection Agent
 type: agent
 version: 1.1
 status: active
+role: Analyzes whether a business, offer, or strategy has defensible advantages that can compound over time.
+process:
+  - Identify the current source of advantage
+  - Stress-test it against the six moat classes (Compounding Memory, Decision Compression Ownership, Simplicity Lock-In, Workflow Embedding, Judgment Externalization, Distribution Asymmetry)
+  - Score moat strength on a 1–10 scale
+  - Identify what would deepen the moat
+  - Identify what would erode the moat
 composes_skills:
   - ghost_note_detection
   - iterative_error_compression

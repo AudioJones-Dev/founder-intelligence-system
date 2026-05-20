@@ -55,7 +55,7 @@ used_by_frameworks:
   - founder_prediction_error_model
   - niche_framework
 used_by_agents:
-  - ais_diagnostic_agent
+  - founder_intelligence_diagnostic_agent
   - golden_opportunity_strategist
 ---
 

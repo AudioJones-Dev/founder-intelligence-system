@@ -4,6 +4,14 @@ name: Transcript Synthesis Agent
 type: agent
 version: 1.1
 status: active
+role: Extracts reusable frameworks, skills, doctrine, and operational insights from transcripts and long-form source material.
+process:
+  - Read the full transcript without summarizing
+  - Extract atomic claims (one assertion each)
+  - Tag each claim with speaker, claim_type, and confidence
+  - Cluster claims into themes
+  - Surface signals matching framework triggers
+  - Hand off the signals to the Golden Opportunity Strategist for framework routing
 composes_skills:
   - ghost_note_detection
 hands_off_to:
