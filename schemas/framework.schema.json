@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://founder-intelligence.system/schemas/framework.schema.json",
+  "title": "Framework",
+  "description": "Composed reasoning system built from multiple skills.",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "purpose",
+    "problem_it_solves",
+    "core_components",
+    "related_skills",
+    "operating_logic",
+    "inputs",
+    "outputs",
+    "strategic_value"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "name": { "type": "string", "minLength": 3 },
+    "purpose": { "type": "string", "minLength": 10 },
+    "problem_it_solves": { "type": "string", "minLength": 10 },
+    "core_components": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "related_skills": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+      "minItems": 1
+    },
+    "operating_logic": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "inputs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "outputs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "failure_modes": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "strategic_value": { "type": "string", "minLength": 10 },
+    "example_applications": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "ontology_refs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "version": { "type": "string", "default": "1.0.0" }
+  },
+  "additionalProperties": false
+}
