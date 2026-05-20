@@ -160,6 +160,9 @@ Format: each row is a `(source) --[relation]--> (target)` edge. Relations follow
 | `founder_intelligence_diagnostic_agent` | `composes` | `map_attribution_framework` |
 | `founder_intelligence_diagnostic_agent` | `composes` | `applied_intelligence_stack` |
 | `founder_intelligence_diagnostic_agent` | `composes` | `founder_prediction_error_model` |
+| `founder_intelligence_diagnostic_agent` | `composes` | `curse_of_capability` |
+| `founder_intelligence_diagnostic_agent` | `composes` | `organizational_memory_infrastructure` |
+| `founder_intelligence_diagnostic_agent` | `composes` | `decision_compression_systems` |
 | `founder_intelligence_diagnostic_agent` | `routes_to` | `golden_opportunity_strategist` |
 | `founder_intelligence_diagnostic_agent` | `routes_to` | `moat_detection_agent` |
 

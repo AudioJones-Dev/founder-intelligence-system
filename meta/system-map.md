@@ -54,7 +54,7 @@ The Founder Intelligence System (FIS) is layered. This document is the entry poi
         │  transcript-synthesis-agent     │
         │  golden-opportunity-strategist  │
         │  moat-detection-agent           │
-        │  founder-intelligence-diagnostic-agent │
+        │  founder-intel-diagnostic-agent │
         │                                 │
         │  prompts/map-attribution        │
         │  prompts/signal-audit           │
