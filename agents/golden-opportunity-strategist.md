@@ -4,6 +4,7 @@ name: Golden Opportunity Strategist
 type: agent
 version: 1.1
 status: active
+role: opportunity_evaluation_agent
 process:
   - Parse the source material
   - Extract strategic claims

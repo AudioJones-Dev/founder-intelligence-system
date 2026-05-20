@@ -4,6 +4,7 @@ name: Moat Detection Agent
 type: agent
 version: 1.1
 status: active
+role: moat_analysis_agent
 process:
   - Identify the current source of advantage
   - Stress-test it against the six moat classes (Compounding Memory, Decision Compression Ownership, Simplicity Lock-In, Workflow Embedding, Judgment Externalization, Distribution Asymmetry)

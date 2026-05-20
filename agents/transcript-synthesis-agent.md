@@ -4,6 +4,7 @@ name: Transcript Synthesis Agent
 type: agent
 version: 1.1
 status: active
+role: transcript_extraction_agent
 process:
   - Read the full transcript without summarizing
   - Extract atomic claims (one assertion each)
