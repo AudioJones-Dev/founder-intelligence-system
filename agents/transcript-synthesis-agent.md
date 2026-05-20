@@ -4,7 +4,7 @@ name: Transcript Synthesis Agent
 type: agent
 version: 1.1
 status: active
-role: transcript_extraction_agent
+role: Extracts reusable frameworks, skills, doctrine, and operational insights from transcripts and long-form source material.
 process:
   - Read the full transcript without summarizing
   - Extract atomic claims (one assertion each)
